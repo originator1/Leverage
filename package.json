@@ -1,0 +1,33 @@
+{
+  "name": "leverage",
+  "version": "1.0.0",
+  "description": "leverage workout application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "build:css": "tailwind build public/src/style.css -o public/dist/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/originator1/Leverage.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/originator1/Leverage/issues"
+  },
+  "homepage": "https://github.com/originator1/Leverage#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.1.2",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.4",
+    "express-session": "^1.17.2",
+    "handlebars": "^4.7.7",
+    "mysql2": "^2.3.2",
+    "sequelize": "^6.8.0",
+    "tailwindcss": "^2.2.19"
+  }
+}
