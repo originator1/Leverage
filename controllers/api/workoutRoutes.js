@@ -1,6 +1,6 @@
 const router = require('express').Router();
-const { Workout } = require('../../models');
-const { Exercise } = require('../../models');
+const { Workout } = require('../../models/Workout');
+const { Exercise } = require('../../models/Exercise');
 
 // router.get('/', async (req, res) => {
 //     try {
