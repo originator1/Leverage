@@ -1,4 +1,9 @@
 /* landing page style */
+/* signing up / logging in */
+.scheduleContainer > div {
+    
+}
+
 #signUpBtn:active {
     box-shadow: 0 5px #666;
     transform: translateY(4px);
@@ -44,11 +49,22 @@
     border-radius: 10px;
 }
 
-#logOutBtn:hover {
-    background-color: rgb(192, 184, 184);
+/* logout button */
+button#logOutBtn {
+    border-bottom: 1px dotted white;
+    border-left: 1px dotted white;
     color: black;
 }
 
+#logOutBtn:hover {
+    position: relative;
+    bottom: 2px;
+    left: 2px;
+    background-color: #9CA3AF;
+    color: white;
+}
+
+/* footer */
 footer {
     text-align: center;
     position: fixed;
@@ -87,10 +103,7 @@ footer {
     left: 0;
 }
 
-#logOutBtn:hover {
-    background-color: white;
-    color: black;
-}
+
 
 #hiddenForm {
     display: none;
@@ -108,10 +121,7 @@ footer {
 
 
 /* SCHEDULE HANDLEBARS */
-#logOutBtn:hover {
-    background-color: white;
-    color: black;
-}
+
 
 #newWorkoutBtn:hover {
     background-color: rgb(189, 186, 186);
@@ -124,6 +134,28 @@ footer {
     height: 100vh;
     border-radius: 5px 5px 5px;
 }
+
+#appNameTitle {
+    text-shadow: rgb(121, 118, 118) 8px 2px 3px;
+}
+
+/* #scheduleAddWorkoutFormBox {
+    overflow: auto;
+} */
+
+#workoutInput {
+    
+}
+/* workouts page styling */
+.mainDiv div {
+    margin-right: 2vw;
+    margin-left: 2vw;
+}
+
+#workoutDets {
+    justify-content: center;
+}
+
 
 @media only screen and (max-width: 750px) {
     .card-deck {
@@ -145,13 +177,83 @@ footer {
     .scheduleHeader {
         text-align: center;
     }
+
+    .appName {
+        font-size: 3em;
+        padding-top: 200px;
+    }
   }
 
 @media only screen and (min-width: 751px) {
     .card-deck {
         display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .appName {
+        padding-top: 250px;
     }
 }
+
+@media (max-width: 450px) { 
+    #appNameTitle {
+        font-size: 2.2rem;
+        position: relative;
+        top: 1rem;
+        left: 0px;
+        text-shadow: rgb(121, 118, 118) 8px 2px 3px;
+    }
+   
+    /* #addWorkoutForm > * {
+        margin-left: 6vw;
+    } */
+    
+
+    .scheduleBody {
+        margin-right: 1em;
+        margin-left: 1em;
+        width: 80%;
+        height: 100%;
+        display: inline-block;
+    }
+
+    div.mainDiv {
+        
+        
+        /* width: 100vw; */
+    }
+    div.mainDiv > * {
+       justify-content: center;
+    }
+
+    div#flex {
+        margin: auto;
+    }
+    /* img#bg {
+        height: 100%;
+        width: 100%;
+    } */
+
+    .mainDiv nav :nth-child(2) {
+        font-size: 3em;
+    }
+
+    button#logOutBtn {
+        position: relative;
+        bottom: 1.5vh;
+        width: 4rem;
+    }
+    /* specific workout page */
+    #addExerciseForm {
+        width: 70vw;
+    }
+
+    #exercise_name {
+        width: 15rem;
+    }
+    #exerciseNameButton {
+        width: 15rem;
+    }
+ }

@@ -1,28 +1,29 @@
-     <nav class="bg-black opacity-95 h-16">
+    <nav class="bg-black opacity-95 h-24" style="width: 100%; margin: auto;">
         <div id="currentDay" class="text-3xl text-white float-left m-3"></div>
-        <div class="text-6xl text-center pt-1 text-white" style="font-family: 'Black Ops One', cursive;">
+        <div id="appNameTitle" class="text-6xl text-center pt-5 text-white" style="font-family: 'Black Ops One', cursive;">
             l e v e r a g e
 
-            <button id="logOutBtn" class="bg-black text-white w-20 text-xl p-1 m-3 rounded float-right"
-                style="font-family: 'Bebas Neue', cursive; transition: 0.5s;"> Log Out </button>
+            <button id="logOutBtn" class="bg-white text-white w-20 text-xl mt-5  rounded float-right"
+                style="font-family: 'Bebas Neue', cursive; transition: 0.5s;"> Log Out 
+            </button>
     </nav>
 
   
 
     <div class="row"></div> 
     {{!-- workout columns --}}
-      <div id="flex" class="flex">
-        <div class="m-5 mt-10">
-            <div style="width: 26rem;" class="bg-white p-2 rounded-md" id="workoutColumn">
-                <div>
+      <div id="flex" class="flex scheduleBody">
+        <div class="m-5 mt-10" id="scheduleBox">
+            <div style="width: 20rem;" class="bg-white p-2 rounded-md" id="workoutColumn">
+                <div id="scheduleAddWorkoutFormBox" class="w-75">
                     <form class="?" id="addWorkoutForm">
                         <input style="font-family: 'Exo 2', sans-serif;" type="text"
-                            class="m-3 w-96 text-2xl p-2 rounded-md border-4 border-gray-300"
+                            class="m-3 w-60 text-1xl p-2 rounded-md border-4 border-gray-300"
                             placeholder="Tricep Killer " id="workoutInput">
                         <br>
                         <button type="submit" id="newWorkoutBtn"
                             style="font-family: 'Bebas Neue', cursive; box-shadow: 0 4px rgb(158, 156, 156); transition: 0.3s;"
-                            class="saveBtn ml-3 rounded-md w-96 p-1 bg-black text-white text-2xl">ADD WORKOUT</button>
+                            class="saveBtn ml-3 rounded-md w-60 p-1 bg-black text-white text-2xl">ADD WORKOUT</button>
                     </form>
                 </div>
                 <h3 style="font-family: 'Exo 2', sans-serif;" class="text-gray-500 text-2xl text-center"> Saved Workouts
@@ -30,14 +31,14 @@
                 <ul id="workoutList">
                     {{#each workouts as |workout| }}
                     <li style="font-family: 'Exo 2', sans-serif;"
-                        class="bg-gray-400 text-2xl rounded-md w-96 p-1 text-center m-3"><a
+                        class="bg-gray-400 text-2xl rounded-md w-75 p-1 text-center m-3"><a
                             href="api/workout/{{id}}" id="{{id}}">{{workout_name}}</a></li>
                      {{/each}} 
                 </ul>
             </div>
         </div>
          <div id="verticalLine" class="mt-5">
-            <div class="scheduleHeader text-5xl text-white mt-5 pl-5" style="font-family: 'Exo 2', sans-serif;">Schedule
+            <div class="scheduleHeader text-center text-5xl text-white mt-5 pl-5" style="font-family: 'Exo 2', sans-serif;">Schedule
             </div>
 
       <!--This is for the container that will hold both the current weather and the five day forecast-->

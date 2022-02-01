@@ -52,3 +52,9 @@ const loginFormHandler = async (event) => {
   document
     .querySelector('#signUpForm')
     .addEventListener('submit', signupFormHandler);
+
+
+
+    //COMPRESSED SCRIPT OF LOGIN.JS
+
+    //const loginFormHandler=async a=>{a.preventDefault();const b=document.querySelector("#email-login").value.trim(),c=document.querySelector("#password-login").value.trim();if(b&&c){const a=await fetch("/api/user/login",{method:"POST",body:JSON.stringify({user_email:b,user_password:c}),headers:{"Content-Type":"application/json"}});a.ok?document.location.replace("/schedule"):(alert(a.statusText),console.log(a))}},signupFormHandler=async a=>{a.preventDefault();const b=document.querySelector("#first-name-signup").value.trim(),c=document.querySelector("#last-name-signup").value.trim(),d=document.querySelector("#email-signup").value.trim(),e=document.querySelector("#password-signup").value.trim();if(b&&c&&d&&e){const a=await fetch("/api/user",{method:"POST",body:JSON.stringify({user_first_name:b,user_last_name:c,user_email:d,user_password:e}),headers:{"Content-Type":"application/json"}});a.ok?document.location.replace("/schedule"):alert(a.statusText)}};document.querySelector("#signInForm").addEventListener("submit",loginFormHandler),document.querySelector("#signUpForm").addEventListener("submit",signupFormHandler);
